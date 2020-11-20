@@ -8,24 +8,52 @@
 </head>
 <body>
 
-    <div class="startgame">
-        <button class="start">Click to start the game</button>
+    <div class="entergame">
+        <button class="enter"><h3>BLACK<br> JACK</h3></button>
     </div>
-    
-    <h3>Dealer Hand</h3>
-    <div class="dealerhand"></div>
-    <div class="dealer-hand-value"></div>
-
-    <h3>Your Hand</h3>
-    <div class="playerhand"></div>
-    <div class="player-hand-value"></div>
-
-    <div class="result"> </div>
-
-    <button class="hit">Hit</button>
-    <button class="stand">Stand</button>
 
    
+    <div class="table">
+    
+        <div class="dealer-card">   
+            <h3>Dealer Hand</h3>
+            <div class="dealercardpic"></div>
+            
+        </div> 
+
+        <div class="player-card">
+            <h3>Your Hand</h3>
+            <div class="playercardpic"></div>
+        </div>
+
+    
+        <div class="dealer-value">
+            <div class="dealerhand"></div>
+            <div class="dealer-hand-value"></div>
+        </div>
+
+        <div class="table-center">
+            <div class="startgame">
+                <button class="start"><h3>START</h3></button>
+            </div> 
+            <div class="result"> 
+                <h2 class="bust"></h2>
+                <h2 class="win-lose"></h2>
+                <button class="hit">Hit</button>
+                <button class="stand" onclick="compare()">Stand</button>
+            </div>
+        </div>
+
+
+
+        <div class="player-value">
+            <div class="playerhand"></div>
+            <div class="player-hand-value"></div>
+        </div>
+
+    </div>  
+
+    
 
     <script src="script-redo.js"></script>
 </body>

@@ -1,0 +1,132 @@
+body{
+    background-color: #0c6339;
+    font-size: 20px;
+    color: #fadcac;
+    
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    font-size: 50px;
+    color: #065446;
+    text-shadow: 3px 3px #fadcac;
+}
+
+.enter h3{
+    
+    text-align: left;
+    
+}
+
+h3{
+    margin: 0;
+    color: #fadcac;
+    font-size: 40px;
+    
+    text-shadow: 3px 3px #065446;;
+}
+
+
+
+.enter{
+    font-size: 60px;
+    background-color: #197163;
+    color: #fadcac;
+    border: 1px solid #197163;
+    border-radius: 50%;
+    height: 280px;
+    width: 280px;
+    position: absolute;
+    cursor: pointer;
+
+}
+
+.enter:hover, .start:hover{
+    transform: scale(1.1, 1.1); 
+}
+
+.entergame{
+    background-color:#0c6339;
+    margin: auto; 
+    width: 95%;
+    height: 800px;    
+    position: absolute;
+    opacity: 0.7;
+    text-align: center;
+    padding-top: 200px;
+
+    display: none;
+}
+
+.start{
+    font-size: 60px;
+    background-color: transparent;
+    color: #fadcac;
+    border: 5px solid #197163;
+    border-radius: 8px;
+    padding: 20px 30px;
+    cursor: pointer;
+
+}
+
+
+.table{
+    width: 70%;
+    margin: auto;
+    padding: 50px 30px;
+    display: grid;
+    grid-template-columns: 300px 200px 300px;
+    grid-template-rows: 300px  250px;
+    
+    grid-gap: 30px;
+}
+
+.dealer-value{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.table-center{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.result{
+    justify-self: center;
+}
+
+
+
+.player-card{
+    grid-column: 3/4;
+    grid-row: 1 / 2;
+    justify-self: end;
+}
+
+.player-value{
+    grid-column:  3/ 4;
+    grid-row: 2 / 3;
+    justify-self: end;
+}
+
+.hit, .stand{
+   
+        font-size: 20px;
+        background-color: #065446;
+        color: #fadcac;
+        border: 1px solid #065446;
+        border-radius: 50% 50%;
+        height: 80px;
+        width: 80px;
+        margin: 40px;
+        cursor: pointer;
+    
+    
+}
+
+img{
+    width: 80px;
+    margin: 10px;
+}
