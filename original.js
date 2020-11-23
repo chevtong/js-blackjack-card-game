@@ -15,17 +15,19 @@
 
 // });  
 
+//TODO 
+// match picture with the 4th card
+// add the score? 
 
 
 
 
-
-let deck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+;
 let randomNum;
-function randomCard(deck){
+function randomCard(){
 
-    randomNum = Math.floor(Math.random() * deck.length); 
-    return deck[randomNum];
+    randomNum = Math.floor((Math.random() * 11)+ 1); 
+    return randomNum;
 }
 
 
@@ -43,9 +45,9 @@ startBtn.addEventListener("click", function(){
     let playerHand;
     let dealerHand; 
 
-    playerHand = [randomCard(deck), randomCard(deck)];
+    playerHand = [randomCard(), randomCard()];
     
-    dealerHand = [randomCard(deck), randomCard(deck)];
+    dealerHand = [randomCard(), randomCard()];
 
     displayValue();
     dealerCardImage();
@@ -113,17 +115,27 @@ startBtn.addEventListener("click", function(){
     //Get more card
     document.querySelector(".hit").addEventListener("click", function(){
 
-    playerHand.push(randomCard(deck));
-    dealerHand.push(randomCard(deck));
+    playerHand.push(randomCard());
+    dealerHand.push(randomCard());
 
         blackJack();
         displayValue();
         dealerCardImage();
 
-        let pCard3 = playerHand[2];
-        let image3 = document.createElement('img');
-        image3.src = "img/"+ pCard3 + ".jpg";
-        document.querySelector(".playercardpic").appendChild(image3);
+     
+        let playerCardImg = document.createElement("img");
+
+
+        for (let i=0 ; i < playercards.length; i++ ){
+
+            
+    
+            playerCardImg.src = "img/" +playercards[i] + ".jpg";
+           
+            playerCard.appendChild(playerCardImg);
+    
+            }  
+    
     });
 
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <title>Document</title>
 </head>
 <body>
@@ -17,44 +17,39 @@
     
         <div class="dealer-card">   
             <h3>Dealer Hand</h3>
-            <div class="dealercardpic"></div>
-            
         </div> 
+
+        <div class="dealer-value">
+            <ul class="dealer-card">
+            </ul>
+        </div>
 
         <div class="player-card">
             <h3>Your Hand</h3>
-            <div class="playercardpic"></div>
         </div>
-
-    
-        <div class="dealer-value">
-            <div class="dealerhand"></div>
-            <div class="dealer-hand-value"></div>
-        </div>
-
-        <div class="table-center">
-            <div class="startgame">
-                <button class="start"><h3>START</h3></button>
-            </div> 
-            <div class="result"> 
-                <h2 class="bust"></h2>
-                <h2 class="win-lose"></h2>
-                <button class="hit">Hit</button>
-                <button class="stand" onclick="compare()">Stand</button>
-            </div>
-        </div>
-
-
 
         <div class="player-value">
-            <div class="playerhand"></div>
-            <div class="player-hand-value"></div>
+            <ul class="player-card">
+            </ul>
         </div>
+
+        
+        <div class="startgame">
+            <button class="start"><h3>START</h3></button>
+        </div> 
+
+        <div class="result">  </div>    
+                   
+        <div class="hit-stand-btn">
+            <button class="hit">Hit</button>
+            <button class="stand">Stand</button>
+        </div>
+     
 
     </div>  
 
     
 
-    <script src="script-redo.js"></script>
+    <script src="new.js"></script>
 </body>
 </html>
