@@ -65,10 +65,6 @@ document.querySelector(".hit").addEventListener("click", function(){
 
     //if dealer hand is smaller than player's, assign one card to dealer
  
-
-  
-    
-
     if (dealerTotalValue() < playerTotalValue()) {
         
         dealerCard.push(randomCard());
@@ -82,6 +78,8 @@ document.querySelector(".hit").addEventListener("click", function(){
     
     console.log("player cards:"+ playerCard);
     console.log("player total value: " + playerValue);
+
+
 
     
 });
@@ -120,14 +118,15 @@ document.querySelector(".stand").addEventListener("click", function(){
 
 
 
-    if(dealerValue < 21){ 
-
-        dealerCard.push(randomCard());
-    }
-
    
 
 
+
+ 
+    playerTotalValue();
+    dealerTotalValue();
+
+    
     console.log("dealer cards: " +dealerCard);
     console.log("dealer total value = " +dealerValue);
 
@@ -135,22 +134,24 @@ document.querySelector(".stand").addEventListener("click", function(){
     console.log("player total value = " +playerValue);
 
 
+    let result = document.querySelector(".result");
 
+    if  (playerValue == 21){
 
-    // let result = document.querySelector(".result");
+        result.textContent = "you win";
 
-    // if  (playerValue === 21){
+    } else if (playerValue > 21){
 
-    //     result.textContent = "you win";
+        result.textContent = "Bust";
 
-    // } else if (playerValue > 21){
+    } else if (playerValue == dealerValue){
 
-    //     result.textContent = "Bust";
+        result.textContent = "You lose";
+    } else {
 
-    // } else {
-
-    //     result.textContent = "You lose";
-    // }
+        result.textContent = "You lose";
+    }
+    console.log(playerValue);
 
 
 });
